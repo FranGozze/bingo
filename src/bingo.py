@@ -33,3 +33,9 @@ def filas_no_vacias(mi_carton):
                 condicion[i] = True
     
     return condicion[0] and condicion [1] and condicion[2]
+def numeros_1_a_90(mi_carton):
+    for fila in mi_carton:
+        for celda in fila:
+            if celda<0 or celda> 90:
+                return False
+    return True
