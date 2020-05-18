@@ -33,18 +33,38 @@ def filas_no_vacias(mi_carton):
                 condicion[i] = True
     
     return condicion[0] and condicion [1] and condicion[2]
+
 def numeros_1_a_90(mi_carton):
     for fila in mi_carton:
         for celda in fila:
             if celda<0 or celda> 90:
                 return False
     return True
+
 def numeros_menores_arriba (mi_carton):
-    for fila in range(9):
-        if not(mi_carton[0][fila] <= mi_carton[1][fila]  or mi_carton[1][fila] == 0):
+    for columna in range(9):
+        if not(mi_carton[0][columna] <= mi_carton[1][columna]  or mi_carton[1][columna] == 0):
             return False
-        if not(mi_carton[0][fila] <= mi_carton[2][fila] or mi_carton[2][fila] == 0): 
+        if not(mi_carton[0][columna] <= mi_carton[2][columna] or mi_carton[2][columna] == 0): 
             return False
-        if not(mi_carton[1][fila] <= mi_carton[2][fila] or mi_carton[2][fila] == 0):
+        if not(mi_carton[1][columna] <= mi_carton[2][columna] or mi_carton[2][columna] == 0):
             return False
+    return True
+
+def numeros_menores_al_siguiente (mi_carton):
+    for fila in range(3):
+        for columna in range(9):
+            if mi_carton[fila][columna] != 0:
+                for i in range(columna + 1, 9):
+                    if mi_carton[0][i] != 0:
+                        if mi_carton[0][i] < mi_carton[fila][columna]:
+                            return False
+                    if mi_carton[1][i] != 0:
+                        if mi_carton[1][i] < mi_carton[fila][columna]:
+                            return False
+                    if mi_carton[2][i] != 0:
+                        if mi_carton[2][i] < mi_carton[fila][columna]:
+                            return False
+    
+            
     return True
