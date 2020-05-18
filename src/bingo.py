@@ -39,3 +39,12 @@ def numeros_1_a_90(mi_carton):
             if celda<0 or celda> 90:
                 return False
     return True
+def numeros_menores_arriba (mi_carton):
+    for fila in range(9):
+        if not(mi_carton[0][fila] <= mi_carton[1][fila]  or mi_carton[1][fila] == 0):
+            return False
+        if not(mi_carton[0][fila] <= mi_carton[2][fila] or mi_carton[2][fila] == 0): 
+            return False
+        if not(mi_carton[1][fila] <= mi_carton[2][fila] or mi_carton[2][fila] == 0):
+            return False
+    return True
