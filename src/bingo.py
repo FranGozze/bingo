@@ -92,4 +92,20 @@ def cinco_celdas_por_fila(mi_carton):
 
     return True
 
-            
+def tres_columnas_una_celda(mi_carton):
+    
+    sum=0
+    for columna in range(9):
+        contador=0
+        if mi_carton[0][columna] > 0:
+            contador +=1
+        if mi_carton[1][columna] > 0:
+            contador +=1
+        if mi_carton[2][columna] > 0:
+            contador +=1
+        if contador == 1:
+            sum +=1
+    
+    if sum == 3 :
+        return True
+    return False
