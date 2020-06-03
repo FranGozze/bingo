@@ -79,4 +79,17 @@ def numeros_no_repetidos(mi_carton):
         return False
 
     return True
+
+def cinco_celdas_por_fila(mi_carton):
+    
+    for fila in mi_carton:
+        sum=0
+        for celda in fila:
+            if celda > 0:
+                sum += 1
+        if sum != 5:
+           return False
+
+    return True
+
             
