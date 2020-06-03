@@ -1,0 +1,12 @@
+language:
+      - python
+python:
+    - 3.6
+script:
+    - pytest 
+before_install:
+    - pip install -U pip
+    - pip install -U pytest
+install:
+    - pip install ".[test]" .
+script: pytest
