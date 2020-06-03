@@ -124,4 +124,16 @@ def columnas_sin_tres_celdas(mi_carton):
             return False
 
     return True
+
+def no_mas_de_2_celdas_juntas(mi_carton):
     
+    for fila in mi_carton:
+        contador = 0
+        for celda in fila:
+            if celda > 0 :
+                contador += 1
+            else:
+                contador = 0
+            if contador == 3 :
+                return False
+    return True
