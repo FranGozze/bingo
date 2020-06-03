@@ -68,3 +68,15 @@ def numeros_menores_al_siguiente (mi_carton):
     
             
     return True
+
+def numeros_no_repetidos(mi_carton):
+    aux= []
+    for fila in mi_carton:
+        for celda in fila:
+            if celda != 0:
+                aux.append(celda)
+    if len(aux) !=  len(set(aux)):
+        return False
+
+    return True
+            
