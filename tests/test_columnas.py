@@ -1,5 +1,4 @@
-from src.bingo import carton
-from src.bingo import columnas_no_vacias
-
+from src import bingo
+mi_carton = bingo.crear_carton()
 def test_columnas_no_vacias():
-    assert columnas_no_vacias( carton() )
+    assert bingo.columnas_no_vacias( mi_carton  )

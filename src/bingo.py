@@ -236,22 +236,22 @@ def imprimirCarton(mi_carton):
     print ("\n")
 
 
-
-
-while True:
-    mi_carton = intento_carton()
-    if(contar_celdas_ocupadas(mi_carton) == 15
-    and cinco_celdas_por_fila(mi_carton)
-    and filas_no_vacias(mi_carton)
-    and columnas_no_vacias(mi_carton)
-    and numeros_1_a_90(mi_carton)
-    and numeros_menores_al_siguiente(mi_carton)
-    and numeros_menores_arriba(mi_carton)
-    and numeros_no_repetidos(mi_carton)
-    and columnas_sin_tres_celdas(mi_carton)
-    and no_mas_de_2_celdas_juntas(mi_carton)
-    and no_mas_de_2_celdas_vacias_juntas(mi_carton)
-    and tres_columnas_una_celda(mi_carton) ):
-        print("Conseguido","\n",mi_carton[0],"\n",mi_carton[1],"\n",mi_carton[2])
-        
-        break
+#Crea un carton (sera el que usemos para pytest)
+def crear_carton():
+    while True:
+        mi_carton = intento_carton()
+        if(contar_celdas_ocupadas(mi_carton) == 15
+        and cinco_celdas_por_fila(mi_carton)
+        and filas_no_vacias(mi_carton)
+        and columnas_no_vacias(mi_carton)
+        and numeros_1_a_90(mi_carton)
+        and numeros_menores_al_siguiente(mi_carton)
+        and numeros_menores_arriba(mi_carton)
+        and numeros_no_repetidos(mi_carton)
+        and columnas_sin_tres_celdas(mi_carton)
+        and no_mas_de_2_celdas_juntas(mi_carton)
+        and no_mas_de_2_celdas_vacias_juntas(mi_carton)
+        and tres_columnas_una_celda(mi_carton) ):
+            print("Conseguido","\n",mi_carton[0],"\n",mi_carton[1],"\n",mi_carton[2])
+            return mi_carton
+            break
