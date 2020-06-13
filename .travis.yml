@@ -3,11 +3,10 @@ language:
 python:
     - 3.6
 install:
-    pip install pytest pytest-cov coveralls
+    pip install coveralls
 
 script:
-    pytest --cov=src/
+    coverage run -m --source=/home/travis/build/franelias/bingo/src pytest
 
 after_success:
     coveralls
-
