@@ -1,15 +1,14 @@
 from src import bingo
 
 mi_carton= [
-        [20,0,0,0,0,0,5,0,0],
-        [2,0,0,10,0,0,0,0,100],
+        [20,0,0,0,0,0,5,0,1],
+        [2,0,0,10,0,0,0,1,100],
         [0,3,1,0,3,0,1,0,9]
     ] 
 
 mi_carton1= [
-        [0,0,0,0,0,0,5,0,0],
-        [2,0,3,10,1,4,0,0,0],
-        [0,3,1,0,3,0,1,0,100],
+        [1,1,1,1,2,1,5,0,1],
+        [2,1,3,10,1,4,3,0,1],
         [0,0,0,0,0,0,0,0,0],
     ] 
 
@@ -23,7 +22,7 @@ def test_cinco_celdas_por_fila():
 def test_no_menor_de_15():
     assert  not bingo.contar_celdas_ocupadas( mi_carton ) > 14
 def test_no_mayor_de_15():
-    assert  not bingo.contar_celdas_ocupadas( mi_carton1) <16
+    assert  not (bingo.contar_celdas_ocupadas( mi_carton1) <16)
 
 def test_columna_orden_de_10():
     assert not bingo.columna_orden_de_10(mi_carton)
