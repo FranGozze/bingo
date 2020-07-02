@@ -61,13 +61,13 @@ def numeros_menores_al_siguiente (mi_carton):
             if mi_carton[fila][columna] != 0:
                 for i in range(columna + 1, 9):
                     if mi_carton[0][i] != 0:
-                        if mi_carton[0][i] < mi_carton[fila][columna]:
+                        if mi_carton[0][i] > mi_carton[fila][columna]:
                             return False
                     if mi_carton[1][i] != 0:
-                        if mi_carton[1][i] < mi_carton[fila][columna]:
+                        if mi_carton[1][i] > mi_carton[fila][columna]:
                             return False
                     if mi_carton[2][i] != 0:
-                        if mi_carton[2][i] < mi_carton[fila][columna]:
+                        if mi_carton[2][i] > mi_carton[fila][columna]:
                             return False
     
             
@@ -265,4 +265,4 @@ def crear_carton():
         and tres_columnas_una_celda(mi_carton) 
         and columna_orden_de_10(mi_carton)):
             return mi_carton
-            break
+        
