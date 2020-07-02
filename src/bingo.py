@@ -262,7 +262,7 @@ def crear_carton():
         and columnas_sin_tres_celdas(mi_carton)
         and no_mas_de_2_celdas_juntas(mi_carton)
         and no_mas_de_2_celdas_vacias_juntas(mi_carton)
-        and tres_columnas_una_celda(mi_carton) ):
-            print("Conseguido","\n",mi_carton[0],"\n",mi_carton[1],"\n",mi_carton[2])
+        and tres_columnas_una_celda(mi_carton) 
+        and columna_orden_de_10(mi_carton)):
             return mi_carton
             break
