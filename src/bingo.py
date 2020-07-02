@@ -55,23 +55,6 @@ def numeros_menores_arriba (mi_carton):
             return False
     return True
 
-def numeros_menores_al_siguiente (mi_carton):
-    for fila in range(3):
-        for columna in range(9):
-            if mi_carton[fila][columna] != 0:
-                for i in range(columna + 1, 9):
-                    if mi_carton[0][i] != 0:
-                        if mi_carton[0][i] > mi_carton[fila][columna]:
-                            return False
-                    if mi_carton[1][i] != 0:
-                        if mi_carton[1][i] > mi_carton[fila][columna]:
-                            return False
-                    if mi_carton[2][i] != 0:
-                        if mi_carton[2][i] > mi_carton[fila][columna]:
-                            return False
-    
-            
-    return True
 
 def numeros_no_repetidos(mi_carton):
     aux= []

@@ -25,8 +25,6 @@ def test_columnas_sin_tres_celdas():
 def test_filas_no_vacias():
     assert bingo.filas_no_vacias( mi_carton )
 
-def test_menores_al_siguente ():
-    assert bingo.numeros_menores_al_siguiente (mi_carton)
 
 def test_numeros_menores_arriba():
     assert bingo.numeros_menores_arriba(mi_carton)
