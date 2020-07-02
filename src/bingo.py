@@ -239,7 +239,6 @@ def crear_carton():
         and filas_no_vacias(mi_carton)
         and columnas_no_vacias(mi_carton)
         and numeros_1_a_90(mi_carton)
-        and numeros_menores_al_siguiente(mi_carton)
         and numeros_menores_arriba(mi_carton)
         and numeros_no_repetidos(mi_carton)
         and columnas_sin_tres_celdas(mi_carton)
