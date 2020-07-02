@@ -158,14 +158,14 @@ def no_mas_de_2_celdas_vacias_juntas(mi_carton):
     return True
 
 def columna_orden_de_10(mi_carton):
-    for i in range(9):
-        if mi_carton[0][i] >= 10*i and mi_carton[0][i] < (i+1)*10:
-            return False
-        if mi_carton[1][i] >= 10*i and mi_carton[1][i] < (i+1)*10:
-            return False
-        if mi_carton[2][i] >= 10*i and mi_carton[2][i] < (i+1)*10:
-            return False
-    
+    posicion1 = [1,10,20,30,40,50,60,70,80]
+    posicion2 = [9,19,29,39,49,59,69,79,90]
+
+    for x in range(3):
+        for y in range(9):
+            if carton[x][y] != 0:
+                if not (carton[x][y] >= posicion1[y] and carton[x][y] <= posicion2[y]):
+                    return False
     return True
 
 
