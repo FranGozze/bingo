@@ -157,6 +157,17 @@ def no_mas_de_2_celdas_vacias_juntas(mi_carton):
   
     return True
 
+def columna_orden_de_10(mi_carton):
+    for i in range(9):
+        if mi_carton[0][i] <= 10*i and mi_carton[0][i] > (i+1)*10:
+            return False
+        if mi_carton[1][i] <= 10*i and mi_carton[1][i] > (i+1)*10:
+            return False
+        if mi_carton[2][i] <= 10*i and mi_carton[2][i] > (i+1)*10:
+            return False
+    
+    return True
+
 
 
 
@@ -224,16 +235,16 @@ def intento_carton():
 
     return mi_carton
 
-
-def imprimirCarton(mi_carton): 
-    print ("\n")
-    for fila in range (3): 
-        for columna in range(9):
-            print (mi_carton[fila][columna], sep= " ")
-        
-        print ("\n")
+#
+#def imprimirCarton(mi_carton): 
+#    print ("\n")
+#    for fila in range (3): 
+#        for columna in range(9):
+#            print (mi_carton[fila][columna], sep= " ")
+#        
+#        print ("\n")
     
-    print ("\n")
+#    print ("\n")
 
 
 #Crea un carton (sera el que usemos para pytest)
@@ -251,7 +262,7 @@ def crear_carton():
         and columnas_sin_tres_celdas(mi_carton)
         and no_mas_de_2_celdas_juntas(mi_carton)
         and no_mas_de_2_celdas_vacias_juntas(mi_carton)
-        and tres_columnas_una_celda(mi_carton) ):
-            print("Conseguido","\n",mi_carton[0],"\n",mi_carton[1],"\n",mi_carton[2])
+        and tres_columnas_una_celda(mi_carton) 
+        and columna_orden_de_10(mi_carton)):
             return mi_carton
             break
