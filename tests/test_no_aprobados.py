@@ -15,7 +15,7 @@ mi_carton1= [
 
 
 def test_tres_columnas_una_celda():
-    assert not bingo.tres_columnas_una_celda(mi_carton1) and 
+    assert not bingo.tres_columnas_una_celda(mi_carton1) 
 
 def test_cinco_celdas_por_fila():
     assert  not  bingo.cinco_celdas_por_fila(mi_carton1)
