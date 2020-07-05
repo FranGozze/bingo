@@ -6,14 +6,6 @@ import random
  #       (8,0,25,38,0,56,0,0,80),
   #      (0,17,29,0,47,0,67,0,88)
     
-def carton():
-    carton = [
-        [0,0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0,0]
-    ]
-    return carton
-
 def contar_celdas_ocupadas(mi_carton):
     contador = 0
     for fila in mi_carton:
@@ -158,10 +150,14 @@ def columna_orden_de_10(mi_carton):
 
 def intento_carton():
     contador = 0
-    mi_carton = carton()
+    mi_carton = [
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]
+    ]
     numerosCarton = 0
 
-    for numerosCarton in range(15):
+    while numerosCarton  < 15:
         contador += 1
         if (contador == 50):
             return intento_carton()
