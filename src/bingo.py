@@ -140,6 +140,14 @@ def columna_orden_de_10(mi_carton):
                     return False
     return True
 
+def matriz_de_3x9(mi_carton):
+    if len(mi_carton) != 3:
+        return False
+    for fila in mi_carton:
+        if len(fila) != 9:
+            return False
+
+    return True
 
 
 
@@ -211,19 +219,6 @@ def intento_carton():
 
     return mi_carton
 
-#
-#def imprimirCarton(mi_carton): 
-#    print ("\n")
-#    for fila in range (3): 
-#        for columna in range(9):
-#            print (mi_carton[fila][columna], sep= " ")
-#        
-#        print ("\n")
-    
-#    print ("\n")
-
-
-#Crea un carton (sera el que usemos para pytest)
 def crear_carton():
     while True:
         mi_carton = intento_carton()
@@ -237,7 +232,8 @@ def crear_carton():
         and columnas_sin_tres_celdas(mi_carton)
         and no_mas_de_2_celdas_juntas(mi_carton)
         and no_mas_de_2_celdas_vacias_juntas(mi_carton)
-        and tres_columnas_una_celda(mi_carton) 
+        and tres_columnas_una_celda(mi_carton)
+        and matriz_de_3x9(mi_carton)
         and columna_orden_de_10(mi_carton)):
             return mi_carton
         

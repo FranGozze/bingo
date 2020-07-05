@@ -39,4 +39,6 @@ def test_no_mas_de_2_celdas_juntas():
 
 def  test_Numeros_1_a_90():
     assert bingo.numeros_1_a_90(mi_carton)
-    
+
+def test_matriz_de3x9():
+    assert bingo.matriz_de_3x9(mi_carton)
