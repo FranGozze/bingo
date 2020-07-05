@@ -59,4 +59,4 @@ $ python3 bingo_print.py
 $ python3 bingo_html.py
 Generado "bingo.html".
 ```
-![Ejemplo Bingo Web](https://github.com/FranGozze/bingo/blob/master/Imagenes/Ejemplo_de_carton_web.png)
+![Ejemplo Bingo Web](https://github.com/FranGozze/bingo/blob/master/Imagenes/Ejemplo_de_carton_web.jpeg)
