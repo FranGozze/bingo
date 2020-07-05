@@ -168,7 +168,7 @@ def intento_carton():
 
         numero = random.randint(1, 90)
 
-        columna = math.floor (numero / 10)
+        columna =int( math.floor (numero / 10))
         if (columna == 9):
              columna = 8
         huecos = 0
