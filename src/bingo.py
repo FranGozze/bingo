@@ -2,9 +2,6 @@ import math
 import random
 # Los 0 representan celdas vacias en el carton.
 # Los 1 representan celdas ocupadas en el carton.
-#   (0,11,0,32,44,0,62,73,0),
- #       (8,0,25,38,0,56,0,0,80),
-  #      (0,17,29,0,47,0,67,0,88)
     
 def contar_celdas_ocupadas(mi_carton):
     contador = 0
