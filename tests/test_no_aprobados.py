@@ -15,7 +15,7 @@ mi_carton1= [
     ] 
 mi_carton2= [
         [1,1,1,1,2,1,5,0,1],
-        [2,1,3,10,1,4,3,0,1,2],
+        [2,1,3,10,1,4,],
         [0,0,0,0,0,0,0,0,0],
         
     ] 
@@ -59,4 +59,6 @@ def test_no_mas_de_2_celdas_juntas():
 def  test_Numeros_1_a_90():
     assert not bingo.numeros_1_a_90(mi_carton)
 def test_matriz_de3x9():
-    assert not  (bingo.matriz_de_3x9(mi_carton1) and bingo.matriz_de_3x9(mi_carton2))
+    assert not  (bingo.matriz_de_3x9(mi_carton1) )
+def test_matriz_de3x9_2():
+    assert not  bingo.matriz_de_3x9(mi_carton2)
